@@ -1,14 +1,14 @@
-#!/bin/sh
-echo "°²×°pip"
+ï»¿#!/bin/sh
+echo "å®‰è£…pip"
 sudo yum install python-setuptools && easy_install pip
 
-echo "Ê¹ÓÃpip°²×°shadowsocks"
+echo "ä½¿ç”¨pipå®‰è£…shadowsocks"
 sudo pip install shadowsocks
 
-echo "É¾³ıÒÑÓĞÅäÖÃÎÄ¼ş"
+echo "åˆ é™¤å·²æœ‰é…ç½®æ–‡ä»¶"
 rm -rf /etc/shadowsocks.json
 
-echo "´´½¨²¢Ğ´ÈëÅäÖÃÎÄ¼ş"
+echo "åˆ›å»ºå¹¶å†™å…¥é…ç½®æ–‡ä»¶"
 echo "{
     \"server\":\"0.0.0.0\",
     \"local_address\": \"127.0.0.1\",
@@ -24,5 +24,5 @@ echo "{
     \"fast_open\": false
 }" >>/etc/shadowsocks.json
 
-echo "Æô¶¯shadowsocks"
+echo "å¯åŠ¨shadowsocks"
 ssserver -c /etc/shadowsocks.json -d start
