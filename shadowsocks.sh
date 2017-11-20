@@ -24,5 +24,19 @@ echo "{
     \"fast_open\": false
 }" >>/etc/shadowsocks.json
 
+echo "设置开机启动shadowsocks"
+echo "ssserver -c /etc/shadowsocks.json -d start" >> /etc/rc.local
+
 echo "启动shadowsocks"
 ssserver -c /etc/shadowsocks.json -d start
+
+echo "安装锐速"
+wget -N --no-check-certificate https://raw.githubusercontent.com/wn789/serverspeeder/master/serverspeeder.sh
+bash serverspeeder.sh
+
+echo "开机启动锐速"
+echo "service serverSpeeder start" >> /etc/rc.local
+
+
+
+
