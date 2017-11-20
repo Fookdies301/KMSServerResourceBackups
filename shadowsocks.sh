@@ -2,6 +2,10 @@
 echo "安装pip"
 sudo yum install python-setuptools && easy_install pip
 
+
+echo "使用pip卸载shadowsocks"
+sudo pip uninstall shadowsocks
+
 echo "使用pip安装shadowsocks"
 sudo pip install shadowsocks
 
@@ -28,7 +32,10 @@ echo "设置开机启动shadowsocks"
 echo "ssserver -c /etc/shadowsocks.json -d start" >> /etc/rc.local
 
 echo "启动shadowsocks"
-ssserver -c /etc/shadowsocks.json -d start
+ssserver -c /etc/shadowsocks.json -d restart
+
+echo "卸载锐速"
+chattr -i /serverspeeder/etc/apx* && /serverspeeder/bin/serverSpeeder.sh uninstall -f
 
 echo "安装锐速"
 wget -N --no-check-certificate https://raw.githubusercontent.com/wn789/serverspeeder/master/serverspeeder.sh
