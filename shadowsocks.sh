@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+﻿#!/bin/bash
 echo "安装pip"
 sudo yum install python-setuptools && easy_install pip
 
