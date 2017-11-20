@@ -2,10 +2,6 @@
 echo "安装pip"
 sudo yum install python-setuptools && easy_install pip
 
-
-echo "使用pip卸载shadowsocks"
-sudo pip uninstall shadowsocks
-
 echo "使用pip安装shadowsocks"
 sudo pip install shadowsocks
 
