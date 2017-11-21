@@ -1,4 +1,9 @@
 ﻿#!/bin/bash
+
+echo "安装ifconfig"
+yum upgrade
+yum install net-tools
+
 echo "安装pip"
 sudo yum install python-setuptools && easy_install pip
 
